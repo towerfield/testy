@@ -1,0 +1,17 @@
+For CS284
+
+for(x <- 1 until 10) println(x)
+for(x <- 10 to 1 by -1) println(x)
+for(x <- (1 to 10).reverse) println(x)
+for(x <- 1 to 5) yield(x * x) //list comprehension
+for(x <- 1 to 5; if x%2 == 0) yield x*x
+for(i <- 1 to 5; j <- 1 to 3; if i * j < 10) yield i*j
+for(i <- 1 to 5; j <- 1 to 3; prod = i*j; if prod < 10) yield prod    // this one is better than line above
+
+(n: Int) => n*n       //anonymous function, because no name. Also called a Lambda.
+val squared = (x: Int) => x * x
+  println(addOne(1)) // 2
+val add = (x: Int, y: Int) => x + y
+  println(add(1, 2)) // 3
+val getTheAnswer = () => 42
+  println(getTheAnswer()) // 42
